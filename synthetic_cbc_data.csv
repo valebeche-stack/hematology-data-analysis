@@ -1,0 +1,21 @@
+sample_id,wbc,hb,plt,neut_abs,lymph_abs,mono_abs,eos_abs,baso_abs,flag_blasts,flag_atypical_lymphocytes,flag_immature_granulocytes,flag_platelet_clumps,analyzer_comment
+H001,6.4,13.4,245,3.6,2.1,0.5,0.15,0.05,false,false,false,false,No significant flag
+H002,1.7,11.8,172,0.8,0.6,0.2,0.08,0.02,false,false,false,false,Leukopenia with neutropenia
+H003,34.2,9.2,118,24.0,5.3,3.0,0.40,0.10,false,false,true,false,Immature granulocyte flag
+H004,8.5,7.4,206,5.1,2.4,0.7,0.20,0.10,false,false,false,false,Marked anemia
+H005,5.9,14.1,68,3.1,2.0,0.5,0.20,0.10,false,false,false,true,Thrombocytopenia and platelet clump flag
+H006,11.2,12.8,315,7.2,2.9,0.8,0.20,0.10,false,false,false,false,No significant flag
+H007,18.6,10.6,421,10.3,6.2,1.4,0.50,0.20,false,true,false,false,Atypical lymphocyte flag
+H008,4.4,13.0,219,2.4,1.5,0.4,0.08,0.02,false,false,false,false,No significant flag
+H009,7.1,12.2,842,4.1,2.1,0.6,0.20,0.10,false,false,false,false,Marked thrombocytosis
+H010,2.3,9.8,132,1.2,0.8,0.2,0.08,0.02,false,false,false,false,Mild leukopenia
+H011,14.8,11.5,281,9.4,3.8,1.1,0.40,0.10,false,false,true,false,Immature granulocyte flag
+H012,42.5,8.7,94,15.2,21.0,4.9,1.00,0.40,true,false,false,false,Blast flag
+H013,6.8,15.0,198,4.0,2.0,0.5,0.20,0.10,false,false,false,false,No significant flag
+H014,3.1,10.7,156,1.6,1.0,0.4,0.08,0.02,false,false,false,false,No significant flag
+H015,9.9,13.7,276,6.1,2.8,0.7,0.20,0.10,false,false,false,false,No significant flag
+H016,12.4,9.5,74,8.0,3.2,0.9,0.20,0.10,false,false,false,false,Thrombocytopenia
+H017,5.2,12.9,234,2.9,1.7,0.4,0.15,0.05,false,false,false,false,No significant flag
+H018,7.8,13.2,251,4.6,2.3,0.6,0.20,0.10,false,false,false,false,No significant flag
+H019,21.6,11.1,359,15.0,4.5,1.6,0.40,0.10,false,false,true,false,Neutrophilia with immature granulocyte flag
+H020,4.9,8.2,188,2.7,1.5,0.5,0.15,0.05,false,false,false,false,Anemia without analyzer flag
