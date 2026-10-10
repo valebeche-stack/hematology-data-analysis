@@ -6,8 +6,13 @@ The review criteria below are illustrative programming rules only
 and are NOT validated clinical decision rules.
 """
 
-import pandas as pd
+from pathlib import Path
+
+import matplotlib
+
+matplotlib.use("Agg")  # Select a non-interactive backend before importing pyplot.
 import matplotlib.pyplot as plt
+import pandas as pd
 
 FLAG_COLUMNS = [
     "flag_blasts",
@@ -75,14 +80,18 @@ def print_summary(df):
     ]
     print(df.loc[df["demo_smear_review"], cols].to_string(index=False))
 
-def make_plots(df):
+def make_plots(df, output_dir="outputs"):
+    """Save the three educational plots without opening GUI windows."""
+    output_dir = Path(output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
     plt.figure()
     plt.scatter(df["wbc"], df["plt"])
     plt.xlabel("WBC (×10^9/L)")
     plt.ylabel("Platelets (×10^9/L)")
     plt.title("Synthetic CBC dataset: WBC vs platelets")
     plt.tight_layout()
-    plt.show()
+    plt.savefig(output_dir / "wbc_vs_platelets.png", dpi=150)
+    plt.close()
 
     plt.figure()
     plt.hist(df["hb"], bins=8)
@@ -90,7 +99,8 @@ def make_plots(df):
     plt.ylabel("Number of samples")
     plt.title("Synthetic hemoglobin distribution")
     plt.tight_layout()
-    plt.show()
+    plt.savefig(output_dir / "hemoglobin_distribution.png", dpi=150)
+    plt.close()
 
     plt.figure()
     plt.scatter(df["neut_abs"], df["lymph_abs"])
@@ -98,7 +108,8 @@ def make_plots(df):
     plt.ylabel("Absolute lymphocytes (×10^9/L)")
     plt.title("Synthetic differential count")
     plt.tight_layout()
-    plt.show()
+    plt.savefig(output_dir / "differential_count.png", dpi=150)
+    plt.close()
 
 def main():
     df = load_data()
