@@ -21,6 +21,28 @@ This repository is designed as a small scientific portfolio project. It illustra
 - `REVIEW_RULES.md` — explanation of the illustrative review logic and its limitations
 - `requirements.txt` — Python dependencies
 
+## Run the example
+
+From the repository directory, install the dependencies and run:
+
+```bash
+python -m pip install -r requirements.txt
+python hematology_analysis.py
+```
+
+The script uses Matplotlib's non-interactive `Agg` backend, so it can run
+without a graphical display. It prints the descriptive summary and illustrative
+review queue, then creates `outputs/` with:
+
+- `wbc_vs_platelets.png`
+- `hemoglobin_distribution.png`
+- `differential_count.png`
+
+Running it again overwrites these files. The input dataset is fixed and the
+workflow uses no random sampling; results are repeatable for the same input
+and dependency versions. Dependencies are not pinned, so identical rendering
+across different environments is not guaranteed.
+
 ## Important laboratory principle
 
 Automated hematology results and analyzer flags are screening tools. A flag is not a diagnosis, and a numerical threshold alone does not establish the need for microscopic review in every laboratory setting. Smear-review criteria should be locally validated and should consider analyzer platform and software configuration, patient population, clinical setting, previous results and delta checks, analytical flags and scattergram patterns, local SOPs, and published consensus recommendations.
